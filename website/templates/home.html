@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Market Prediction</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">Stock Market Prediction</div>
+
+        <div class="nav-links">
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('predict') }}">Predict</a>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+
+            <h1>Stock Market Prediction and Analysis</h1>
+
+            <p>
+                Analyze and predict stock prices using historical market data
+                with LSTM and ARIMA forecasting models.
+            </p>
+
+            <a href="{{ url_for('predict') }}" class="predict-button">
+                Start Prediction
+            </a>
+
+        </div>
+    </section>
+
+    <section class="companies">
+
+        <h2>Stocks Analyzed</h2>
+
+        <div class="company-container">
+
+            <div class="company-card">
+                <h3>Amazon</h3>
+                <p>AMZN</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Apple</h3>
+                <p>AAPL</p>
+            </div>
+
+            <div class="company-card">
+                <h3>Microsoft</h3>
+                <p>MSFT</p>
+            </div>
+
+        </div>
+
+    </section>
+
+</body>
+</html>

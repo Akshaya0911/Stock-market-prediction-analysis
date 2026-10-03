@@ -1,0 +1,257 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: #f4f7fb;
+    color: #1f2937;
+}
+
+/* Navigation Bar */
+.navbar {
+    height: 70px;
+    background: #14213d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 8%;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+    color: white;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fca311;
+}
+
+/* Home Page */
+.hero {
+    min-height: 500px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(135deg, #14213d, #264653);
+}
+
+.hero-content {
+    max-width: 800px;
+}
+
+.hero h1 {
+    color: white;
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    color: #e5e7eb;
+    font-size: 19px;
+    line-height: 1.7;
+    margin-bottom: 35px;
+}
+
+.predict-button {
+    display: inline-block;
+    padding: 14px 30px;
+    background: #fca311;
+    color: #14213d;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+    border-radius: 8px;
+    transition: 0.3s;
+}
+
+.predict-button:hover {
+    transform: translateY(-2px);
+    background: #ffb703;
+}
+
+/* Stocks Section */
+.companies {
+    padding: 60px 8%;
+    text-align: center;
+}
+
+.companies h2 {
+    font-size: 30px;
+    margin-bottom: 35px;
+    color: #14213d;
+}
+
+.company-container {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.company-card {
+    width: 240px;
+    padding: 30px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.10);
+    transition: 0.3s;
+}
+
+.company-card:hover {
+    transform: translateY(-5px);
+}
+
+.company-card h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+    color: #14213d;
+}
+
+.company-card p {
+    color: #6b7280;
+    font-weight: bold;
+}
+/* Prediction Page */
+.prediction-section {
+    min-height: calc(100vh - 70px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px 20px;
+    background: linear-gradient(135deg, #f4f7fb, #e8eef7);
+}
+
+.prediction-card {
+    width: 100%;
+    max-width: 500px;
+    background: white;
+    padding: 40px;
+    border-radius: 14px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.prediction-card h1 {
+    text-align: center;
+    color: #14213d;
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+
+.prediction-card > p {
+    text-align: center;
+    color: #6b7280;
+    line-height: 1.6;
+    margin-bottom: 30px;
+}
+
+.prediction-card form {
+    display: flex;
+    flex-direction: column;
+}
+
+.prediction-card label {
+    font-weight: bold;
+    color: #14213d;
+    margin-bottom: 8px;
+}
+
+.prediction-card select,
+.prediction-card input {
+    width: 100%;
+    padding: 13px;
+    margin-bottom: 22px;
+    border: 1px solid #d1d5db;
+    border-radius: 7px;
+    font-size: 15px;
+    background: white;
+}
+
+.prediction-card select:focus,
+.prediction-card input:focus {
+    outline: none;
+    border-color: #fca311;
+}
+
+.submit-button {
+    border: none;
+    padding: 14px;
+    background: #fca311;
+    color: #14213d;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 7px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.submit-button:hover {
+    background: #ffb703;
+    transform: translateY(-2px);
+}
+/* Prediction Results */
+.prediction-results {
+    margin-top: 35px;
+    padding-top: 25px;
+    border-top: 1px solid #e5e7eb;
+}
+
+.prediction-results h2 {
+    color: #14213d;
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.prediction-results p {
+    margin: 8px 0;
+    color: #4b5563;
+}
+
+.prediction-results table {
+    width: 100%;
+    margin-top: 20px;
+    border-collapse: collapse;
+}
+
+.prediction-results th,
+.prediction-results td {
+    padding: 12px;
+    text-align: center;
+    border-bottom: 1px solid #e5e7eb;
+}
+
+.prediction-results th {
+    background: #14213d;
+    color: white;
+}
+
+.prediction-results tr:hover {
+    background: #f8fafc;
+}
+
+.error-message {
+    margin-top: 25px;
+    padding: 12px;
+    background: #fee2e2;
+    color: #991b1b;
+    border-radius: 7px;
+    text-align: center;
+}
