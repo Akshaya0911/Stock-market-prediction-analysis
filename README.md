@@ -6,11 +6,11 @@
 
 
 
-This project is based on stock price prediction using LSTM and ARIMA models. Historical stock data of Amazon, Apple, and Microsoft was collected using Yahoo Finance.
+This project focuses on stock price prediction using LSTM and ARIMA models. Historical stock data for Amazon, Apple, and Microsoft was collected using Yahoo Finance.
 
 
 
-The main goal of the project is to analyze the stock data, build both models, compare their performance, and use the better performing model for future price prediction.
+The main goal of the project is to analyze historical stock prices, build prediction models, compare their performance, and use ARIMA to generate future stock price forecasts through a simple web application.
 
 
 
@@ -64,7 +64,7 @@ The main goal of the project is to analyze the stock data, build both models, co
 
 
 
-LSTM was used to predict stock prices based on patterns in the historical data. The data was scaled and divided into training, validation, and testing sets before training the model.
+LSTM was used to learn patterns from historical stock prices and generate predictions. The data was scaled and divided into training, validation, and testing sets before training the model.
 
 
 
@@ -72,7 +72,7 @@ LSTM was used to predict stock prices based on patterns in the historical data. 
 
 
 
-ARIMA was also used for stock price prediction. The model was tested using rolling predictions and its performance was compared with LSTM.
+ARIMA was used as a time-series forecasting model. Rolling predictions were generated on the test data and compared with the actual stock prices.
 
 
 
@@ -80,7 +80,7 @@ ARIMA was also used for stock price prediction. The model was tested using rolli
 
 
 
-| Company | LSTM MAE | LSTM Accuracy | ARIMA MAE | ARIMA Accuracy |
+| Company | LSTM MAE | LSTM MAPE-based Accuracy | ARIMA MAE | ARIMA MAPE-based Accuracy |
 
 | --- | ---: | ---: | ---: | ---: |
 
@@ -92,7 +92,7 @@ ARIMA was also used for stock price prediction. The model was tested using rolli
 
 
 
-Both models gave good results for the three stocks. In this project, ARIMA had lower MAE and slightly higher accuracy than LSTM.
+Both models performed well on the selected historical stock data. In this project, ARIMA produced lower MAE and slightly higher MAPE-based accuracy than LSTM for all three stocks.
 
 
 
@@ -100,23 +100,21 @@ Both models gave good results for the three stocks. In this project, ARIMA had l
 
 
 
-A simple Flask web application was created for stock price prediction.
+A simple Flask web application was created for stock price forecasting.
 
 
 
-The user can select:
+The user can:
 
 
 
-\- Amazon
+\- Select Amazon, Apple, or Microsoft
 
-\- Apple
+\- Enter a forecast period from 1 to 30 business days
 
-\- Microsoft
+\- Generate future stock price forecasts using ARIMA
 
-
-
-The user can also enter the number of days to predict. The application then uses the ARIMA model to display the predicted stock prices for those days.
+\- View the predicted stock prices by date
 
 
 
@@ -128,19 +126,17 @@ The project contains the following folders:
 
 
 
-\- `data` - folder for project data
+\- `python` - contains the Jupyter Notebook used for data analysis and model development
 
-\- `python` - contains the Jupyter Notebook
-
-\- `results` - contains the model graphs and comparison graphs
+\- `results` - contains LSTM, ARIMA, and model comparison graphs
 
 \- `website` - contains the Flask web application
 
-\- `README.md` - project information
+\- `README.md` - contains the project details
 
 
 
-The `results` folder contains separate folders for LSTM, ARIMA, and model comparison.
+The stock data is downloaded directly from Yahoo Finance using the `yfinance` library, so a separate dataset is not required.
 
 
 
@@ -148,7 +144,7 @@ The `results` folder contains separate folders for LSTM, ARIMA, and model compar
 
 
 
-The following graphs are included in the project:
+The project includes the following visualizations:
 
 
 
@@ -162,11 +158,23 @@ The following graphs are included in the project:
 
 
 
-\## How to Run the Website
+The comparison results show that ARIMA had lower prediction error than LSTM for the three stocks used in this project.
 
 
 
-Activate the environment:
+\## How to Run the Project
+
+
+
+Install the required Python packages:
+
+
+
+&#x20;   pip install -r requirements.txt
+
+
+
+Activate the project environment if needed:
 
 
 
@@ -178,11 +186,11 @@ Go to the website folder:
 
 
 
-&#x20;   cd "C:\\Users\\aksha\\Documents\\Prediction and Analysis of Stock Market Using ARIMA Models\\website"
+&#x20;   cd website
 
 
 
-Run the application:
+Run the Flask application:
 
 
 
@@ -198,5 +206,5 @@ Open the local address shown in the terminal to view the website.
 
 
 
-The predictions in this project are based on the historical data period used for the analysis. They are created for project and learning purposes.
+The predictions in this project are based on the historical data period used for the analysis. They are created for project and learning purposes and should not be considered financial advice.
 
